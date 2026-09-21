@@ -59,6 +59,8 @@ def handle_attendance_check():
                 steps = VITPredictor.get_medical_guidance_steps()
                 for idx, step in enumerate(steps, 1):
                     print(f"{idx}. {step}")
+            else:
+                print("Debarred, and medical condonation is not applicable. You cannot appear for the exam.")
 
 def handle_target_prediction():
     print("\n--- TEE Target Score Predictor ---")
