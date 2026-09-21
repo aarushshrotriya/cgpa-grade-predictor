@@ -72,10 +72,16 @@ vit-grade-predictor/
 **1.Clone the repository:**
 
 ```bash
-git clone [https://github.com/aarushshrotriya/cgpa-grade-predictor.git](https://github.com/aarushshrotriya/cgpa-grade-predictor.git)
+git clone https://github.com/aarushshrotriya/cgpa-grade-predictor.git
 cd cgpa-grade-predictor
 ```
-**2.Verify Python installation:**
+**Navigating into Directory**
+
+```bash
+cd cgpa-grade-predictor
+```
+
+**3.Verify Python installation:**
 Ensure you have Python 3.10 or higher installed:
 
 ```bash
