@@ -75,7 +75,7 @@ vit-grade-predictor/
 git clone https://github.com/aarushshrotriya/cgpa-grade-predictor.git
 cd cgpa-grade-predictor
 ```
-**Navigating into Directory**
+**2.Navigating into Directory**
 
 ```bash
 cd cgpa-grade-predictor
