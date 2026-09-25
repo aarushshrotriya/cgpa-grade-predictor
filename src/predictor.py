@@ -4,11 +4,7 @@ class VITPredictor:
         current_earned_weightage: float,
         target_total_marks: float
     ) -> dict:
-        """
-        Calculates raw TEE marks (out of 100) needed to achieve target_total_marks.
-        - current_earned_weightage: Sum of earned weights (CAT1 + CAT2 + Internal + Attendance).
-        - target_total_marks: Desired overall score out of 100.
-        """
+        
         needed_weightage = target_total_marks - current_earned_weightage
         if needed_weightage <= 0:
             return{
@@ -16,8 +12,7 @@ class VITPredictor:
                 "required_tee_marks": 0.0,
                 "message": "Target already achieved!"
             }
-        # TEE carries 40% weightage (40 marks)
-        # raw_tee / 100 * 40 = needed_weightage => raw_tee = (needed_weightage / 40) * 100
+        
         required_raw_tee = (needed_weightage / 40.0) * 100.0
         if required_raw_tee > 100.0:
             return {

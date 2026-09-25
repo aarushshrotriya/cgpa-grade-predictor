@@ -9,25 +9,20 @@ class Assessment:
             scored_marks: float,
             max_marks: float
     ):
-        """
-        Represents an individual assessment (e.g., Midterm Exam).
-        - weightage: Percentage contribution to overall course grade (e.g., 30 for 30%).
-        - scored_marks: Marks achieved by the student.
-        - max_marks: Total possible marks for this assessment.
-        """
+        
         self.name = name
         self.weightage = weightage
         self.scored_marks = scored_marks
         self.max_marks = max_marks
 
     def get_weighted_score(self) -> float:
-        """Calculates the weighted percentage contribution of this assessment."""
+        
         if self.max_marks ==0:
             return 0.0
         return (self.scored_marks / self.max_marks) * self.weightage
 
     def to_dict(self) -> dict:
-        """Converts the object to a dictionary for JSON serialization."""
+        
         return{
             "name": self.name,
             "weightage": self.weightage,
@@ -37,7 +32,7 @@ class Assessment:
 
     @staticmethod
     def from_dict(data: dict):
-        """Creates an Assessment instance from a dictionary."""
+        
         return Assessment(
             data["name"],
             data["weightage"],
